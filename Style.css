@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;800&family=Nunito:wght@500;700;1000&display=swap');
+
+*{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 1vh 6vh 0;
+}
+
+/*FORMATAÇÕES PADRÃO*/
+
+h1{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 1000;
+}
+
+h2, h3{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+img{
+    border-radius: 20px;
+}
+
+.CenterAlign{ /*Centraliza elementos*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TextAlign{ /*Centraliza elementos textuais*/
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: block;
+    padding: 6vh 0 2vh;
+}
+/*BOTÕES*/
+.Bt_Primary{ /*Botão principal*/
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    height: 10vh;
+    padding: 0 10vh;
+    border-radius: 0 20px 20px 20px;
+    margin: 0;
+}
+
+.Bt_Primary:not(#BT_Entrar){
+    position: relative;
+}
+
+.Bt_Primary:hover:not(#BT_Entrar){
+    top: -5px;
+}
+
+.Bt_Secondary{ /*Botão secundário*/
+    text-decoration: none;
+    color: black;
+}
+
+.Bt_Link{ /*Botão em texto*/
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.Bt_Link:hover{
+    top: -2px;
+    text-decoration:underline 1px;
+}
+
+.Content_Box{
+    background-color: #e4e4e4;
+    border-radius: 20px;
+    margin-bottom: 3vh;
+}
+
+.Card{
+    background-color: #acacac;
+    height: 50vh;
+    width: 50vh;
+    margin: 4vh 4vh 8vh;
+    padding: 2vh 6vh 2vh;
+    border-radius: 0 20px 20px 20px;
+    display: block;
+    position: relative;
+    transition: all ease 2sg;
+}
+
+.Card:hover{
+    top: -10px;
+}
+
+/*BARRA DE NAVEGAÇÃO*/
+#NavBar_Content{
+    background-color: #e4e4e4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding-left: 5vh;
+    position: relative;
+    height: 6vh;
+    margin:1vh 0 3vh;
+    position: sticky;
+    top: 2vh;
+    z-index: 1;
+}
+
+.Bt_Link{
+    padding:0 2vh;
+}
+
+#BT_Entrar{
+    height: 6vh;
+    margin: 0; 
+}
+
+/*APRESENTAÇÃO*/
+#Presentation_Content{
+    justify-content: space-between;
+    height: 80vh;
+}
+
+#Presentation_Content div:not(#Presentation_Content_Text){
+    height: 80vh;
+    border-radius: 0 20px 20px 20px;
+}
+
+#Presentation_Content img{
+    border-radius: 0 20px 20px 20px;
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#Presentation_Content_Text{
+    margin: 0 30vh 0 10vh;
+    width: 30%;
+}
+
+/*BENEFICIOS*/
+#Benefits_Content{
+    display: block;
+    width: 100%;
+    height: 82vh;
+}
+
+#Benefits_Presentation_Img{
+    margin-top: 4vh;
+}
+
+#Benefits_Presentation_Img img{
+    width: 40vh;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 0 20px 20px 20px;
+}
+
+#Benefits_Presentation_TxT{
+    padding: 6vh;
+}
+
+.Card img{
+    width: 30vh;
+    height: 30vh;
+}
+
+.Card .TextAlign{
+    height: 20vh;
+}
+
+/*PLANOS*/
+#Plans_Content{
+    display: block;
+    width: 100%;
+    height: 80vh;
+}
+
+
