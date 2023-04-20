@@ -1,0 +1,67 @@
+#Login_Content{
+    height: 85vh;
+    width: 100%;
+    background-color: white;
+    padding: 0;
+    border-radius: 0 20px 20px 20px;
+}
+
+/*Formatação da Esquerda*/
+#LoginContent_Left{
+    width: 50%;
+    height: 100%;
+    border-radius: 0 20px 20px 20px;
+}
+
+#LoginContent_Left img{
+    border-radius: 0 20px 20px 20px;
+    height: 85vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*Formatação da Direita*/
+#LoginContent_Right{
+    width: 50%;
+    height: 100%;
+    padding: 10vh 4vw 4vh;
+}
+
+#LoginContent_Right img{
+    width: 20%;
+    height: 20%;
+    margin-bottom: 2vh;
+}
+
+#LoginContent_Right hgroup{
+    margin-bottom: 4vh;
+}
+
+#LoginContent_Right input{
+    padding: 2vh;
+    width: 60%;
+    border: 0;
+    border-radius: 20px;
+    background-color: #e4e4e4;
+    margin-bottom: 1.5vh;
+}
+
+#LoginContent_Right > div:not(#LoginContent_Bt){
+    width: 60%;
+    background-color: orange;
+    padding: 0;
+    margin: 0 auto 2vh;
+}
+
+#LoginContent_Right > div > label{
+    display: flex;
+    width: 50%;
+}
+
+#LoginContent_Right > div > label > input{
+    padding: 00;
+}
+
+#LoginContent_Right > div > a{
+    width: 50%;
+}

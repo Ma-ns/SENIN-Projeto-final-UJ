@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENIN</title>
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="ADM_Style.css">
+</head>
+<body>
+    <header id="NavBar_Content" class="CenterAlign">
+        <h1>SENIN</h1>
+        <nav>
+            <table>
+            <tr>
+                <th><a href="/Site novo/Site/Index.html" class="Bt_Link">Início</a></th>
+                <th><a href="" class="Bt_Link">Sobre</a></th>
+                <th><a href="" class="Bt_Link">Contato</a></th>
+                <th><a href="Plataforma/ADM_Criar.html" id="BT_Entrar" class="Bt_Primary Bt_NoTop CenterAlign">Entrar</a></th>
+            </tr>
+        </table>
+        </nav>
+    </header>
+
+    <!-- Tela de Criação -->
+    <div id="Create_Content" class="Content_Box CenterAlign">
+        <div id="Create_ContentLeft">
+            <div id="Create_OpBar">
+                <div id="Create_Input">
+                    <input type="text" placeholder="...">
+                </div>
+                <div id="Create_OpBt" class="CenterAlign">
+                    <button class="Bt_Primary CenterAlign">Salvar</button>
+                    <button class="Bt_Secondary CenterAlign">Sair</button>
+                </div>
+            </div>
+            <div id="Create_Question">
+                <button id="Bt_RoundVoltar" class="Bt_Round">&lt;</button>
+                <div id="Question_InputArea">
+                    <textarea name="Pergunta" id="Question" cols="30" rows="10" placeholder="..."></textarea>
+                    <div id="InputRep_Area">
+                    <span class="RespInput"><textarea name="Resposta A" id="R_A" cols="30" rows="4" placeholder="..."></textarea><span class="CheckContainer CenterAlign"><input type="checkbox"><span class="Checkbox"></span></span></span>
+                    <span class="RespInput"><textarea name="Resposta A" id="R_A" cols="30" rows="4" placeholder="..."></textarea><span class="CheckContainer CenterAlign"><input type="checkbox"><span class="Checkbox"></span></span></span>
+                    <button class="Bt_Primary CenterAlign" id="Bt_AddQ">Adicionar</button>
+                    </div>
+                </div>
+                <button id="Bt_RoundSeguir" class="Bt_Round">&gt;</button>
+            </div>
+        </div>
+        <div id="Create_ContentRight" class="CenterAlign">
+            <button draggable="true" class="Question_bt Collapsible TextAlign Drag_Question">Questão 1</button>
+            <div class="RightQuestion_Content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            
+            <button draggable="true" class="Question_bt Collapsible TextAlign Drag_Question">Questão 2</button>
+            <div class="RightQuestion_Content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <button draggable="true" class="Question_bt Collapsible TextAlign Drag_Question">Questão 3</button>
+            <div class="RightQuestion_Content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            
+            <a class="Bt_Primary CenterAlign" id="Bt_AddQuestion" href="#Modal_Criação">Adicionar</a>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="Modal_Criação" class="Modal CenterAlign TextAlign">
+        <div class="Modal_Content Content_Box CenterAlign TextAlign">
+            <div class="Modal_ContentContent">
+                <hgroup>
+                    <h2>Titulo 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </hgroup>
+                <div class="Modal_Cards CenterAlign">
+                    <button class="Modal_Card">
+                        <h3>Titulo 3</h3>
+                        <img src="../Imagens/PresentationIMG.jpg" alt="">
+                    </button>
+                    <button class="Modal_Card">
+                        <h3>Titulo 3</h3>
+                        <img src="../Imagens/PresentationIMG.jpg" alt="">
+                    </button>
+                </div>
+                <a class="Bt_Primary" id="Bt_Escolher" href="#">Escolher</a>
+                <a href="#" class="Modal_Close">&times;</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script.js"></script>
+</body>
+</html>
