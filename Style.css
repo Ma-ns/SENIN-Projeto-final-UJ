@@ -11,6 +11,8 @@ body{
     height: auto;
     margin: 0;
     padding: 1vh 6vh 0;
+    overflow-x: hidden;
+    font-size: 100%;
 }
 
 /*FORMATAÇÕES PADRÃO*/
@@ -25,8 +27,37 @@ h2, h3{
     font-weight: 700;
 }
 
+.SmallText{
+    font-size: 0.5rem;
+}
+
+.MediumText{
+    font-size: 1.4rem;
+}
+
+.BigText{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.FocusText{
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 8vh 0;
+}
+
 img{
     border-radius: 20px;
+}
+
+hgroup > h2,h3,h4,h5,h6{
+    line-height: 2vh;
+    margin-bottom: 2vh;
+}
+
+hgroup > p{
+    line-height: 3.2vh;
+    margin-bottom: 2vh;
 }
 
 .CenterAlign{ /*Centraliza elementos*/
@@ -51,53 +82,127 @@ img{
     padding: 0 10vh;
     border-radius: 0 20px 20px 20px;
     margin: 0;
-}
-
-.Bt_Primary:not(#BT_Entrar){
+    top: 0;
+    transition: top ease-in 0.1s;
     position: relative;
 }
 
-.Bt_Primary:hover:not(#BT_Entrar){
+.Bt_Primary:hover{
+    opacity: 82%;
+    cursor: pointer;
+}
+
+.Bt_Primary:hover:not(.Bt_NoTop){
     top: -5px;
 }
 
 .Bt_Secondary{ /*Botão secundário*/
     text-decoration: none;
+    font-weight: 800;
+    background-color: rgba(0, 0, 0, 0);
     color: black;
+    height: 10vh;
+    padding: 0 10vh;
+    border: 4px solid black;
+    border-radius: 0 20px 20px 20px;
+    margin: 0;
+    top: 0;
+    transition: top ease-in 0.1s;
+    position: relative;
+}
+
+.Bt_Secondary:hover:not(.Bt_NoTop){
+    opacity: 82%;
+    top: -5px;
+    cursor: pointer;
 }
 
 .Bt_Link{ /*Botão em texto*/
     text-decoration: none;
     color: black;
     position: relative;
+    top: 0;
+    transition: top ease-in 0.1s;
 }
 
 .Bt_Link:hover{
-    top: -2px;
-    text-decoration:underline 1px;
+    top: -1.5px;
+    cursor: pointer;
 }
 
-.Content_Box{
+.Bt_Round{
+    width: 11vh;
+    height: 10vh;
+    background-color: #878787;
+    font-family: 'Inter';
+    font-weight: 700;
+    color: #e4e4e4;
+    border: 0;
+    border-radius: 100%;
+}
+
+.Bt_Round:hover{
+    background-color: #616161;
+    cursor: pointer;
+}
+/*FIM DE BOTÕES*/
+
+.Content_Box{ /*Caixa de Conteúdo Padrão*/
     background-color: #e4e4e4;
     border-radius: 20px;
     margin-bottom: 3vh;
+    padding: 0;
+}
+
+.Content_Box:not(#Presentation_Content, #Create_Content){
+    padding: 0 4vh;
 }
 
 .Card{
-    background-color: #acacac;
-    height: 50vh;
+    background-color: white;
+    height: 45vh;
     width: 50vh;
-    margin: 4vh 4vh 8vh;
+    margin: 4vh 4vh 8vh 0;
     padding: 2vh 6vh 2vh;
     border-radius: 0 20px 20px 20px;
     display: block;
+    top: 0;
+    transition: top ease-in 0.1s;
     position: relative;
-    transition: all ease 2sg;
+    overflow-y: visible;
 }
 
 .Card:hover{
     top: -10px;
 }
+
+.Collapsible{
+    cursor: pointer;
+}
+
+.active, .Collapsible:hover{
+    background-color: #b7b7b7;
+}
+
+::-webkit-scrollbar{
+    width: 0.8vw;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #b7b7b7;
+    border-radius: 40px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #878787;
+    border-radius: 40px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: black;
+}
+
+/*FIM DE FORMATAÇÕES PADRÃO*/
 
 /*BARRA DE NAVEGAÇÃO*/
 #NavBar_Content{
@@ -112,7 +217,7 @@ img{
     margin:1vh 0 3vh;
     position: sticky;
     top: 2vh;
-    z-index: 1;
+    z-index: 3;
 }
 
 .Bt_Link{
@@ -122,67 +227,152 @@ img{
 #BT_Entrar{
     height: 6vh;
     margin: 0; 
+    left: 4px;
 }
+/*FIM DE BARRA DE NAVEGAÇÃO*/
 
 /*APRESENTAÇÃO*/
 #Presentation_Content{
     justify-content: space-between;
     height: 80vh;
-}
-
-#Presentation_Content div:not(#Presentation_Content_Text){
-    height: 80vh;
+    width: 100%;
+    background-color: white;
     border-radius: 0 20px 20px 20px;
 }
 
 #Presentation_Content img{
     border-radius: 0 20px 20px 20px;
     height: 80vh;
-    width: 100%;
+    width: 50vw;
     object-fit: cover;
 }
 
 #Presentation_Content_Text{
-    margin: 0 30vh 0 10vh;
-    width: 30%;
+    display: block;
+    justify-content: center;
+    margin: 0 10vh;
+    width: 30vw;
 }
+
+#Presentation_Content > hgroup > a{
+    margin-top: 4vh;
+}
+/*FIM DE APRESENTAÇÃO*/
 
 /*BENEFICIOS*/
 #Benefits_Content{
     display: block;
     width: 100%;
-    height: 82vh;
+    height: 85vh;
 }
 
-#Benefits_Presentation_Img{
-    margin-top: 4vh;
+#Benefits_Cards{
+    margin: 8vh 0 3vh;
+    height: 50vh;
 }
 
-#Benefits_Presentation_Img img{
-    width: 40vh;
-    height: 40vh;
-    object-fit: cover;
-    border-radius: 0 20px 20px 20px;
-}
-
-#Benefits_Presentation_TxT{
-    padding: 6vh;
-}
-
-.Card img{
+#Benefits_Cards .Card img{
     width: 30vh;
     height: 30vh;
+    position: relative;
+    top: -6vh;
+    margin: -2vh;
 }
 
-.Card .TextAlign{
+#Benefits_Cards .Card p, h3{
+    position: relative;
+    top: -2vh;
+}
+
+#Benefits_Cards .Card .TextAlign{
     height: 20vh;
 }
+/*FIM DE BENEFÍCIOS*/
 
 /*PLANOS*/
 #Plans_Content{
     display: block;
     width: 100%;
+    height: 90vh;
+}
+
+#Plans_Cards{
+    height: 65vh;
+}
+
+#Plans_Cards .Card{
+    height: 60vh;
+    padding: 6vh 4vw 0;
+}
+.Plan_CardContent{
+    height: 40vh;
+}
+
+#Plans_Cards > div > div > hgroup > p{
+    margin-top: 0vh;
+}
+
+#Plans_Cards > div > div > hgroup > h3{
+    margin-bottom: 0vh;
+}
+
+#Plans_Cards > div > div > ul > li{
+    text-align: start;
+}
+
+#Plans_Cards > div > div > ul{
+    margin-bottom: 8vh;
+}
+
+#Plans_Cards > div > div > a{
+    padding: 2vh 4vw;
+    
+}
+
+@media (max-width: 1024px) {
+    #Plans_Cards, #Benefits_Cards{
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+}
+/*FIM DE PLANOS*/
+
+/*FAQ*/
+#FAQ_Content{
+    display: block;
+    width: 100%;
     height: 80vh;
 }
 
+#FAQ_Questions{
+    width: 90%;
+    margin: 0 auto;
+    padding-right: 1vw;
+    display: block;
+}
 
+.FAQ_Bt{
+    width: 100%;
+    padding: 3vh 4vh;
+    background-color: white;
+    border-radius: 0 20px 20px 20px;
+    text-align: start;
+    background-color: white;
+    border: none;
+    font-family: 'Nunito';
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 2vh;
+}
+
+.FAQ_QuestionContent{
+    display: none;
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    margin: 0 0 4vh;
+    padding: 0 4vw;
+    border-radius: 0 20px 20px 20px;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
