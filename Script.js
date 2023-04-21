@@ -1,5 +1,8 @@
 /*SITE DE APRESENTAÇÃO*/
 /*INICIO*/
+document.addEventListener('DOMContentLoaded', function () {
+  window.setTimeout(document.querySelector('svg').classList.add('animated'),1000);
+});
 
 /*FAQ*/
 var collapse = document.getElementsByClassName("Collapsible");

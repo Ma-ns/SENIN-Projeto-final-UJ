@@ -4,6 +4,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     box-sizing: border-box;
+    color: #061739;
 }
 
 body{
@@ -13,7 +14,11 @@ body{
     padding: 1vh 6vh 0;
     overflow-x: hidden;
     font-size: 100%;
+    background-image: url(Imagens/Background.svg);
+    background-repeat: no-repeat;
 }
+
+
 
 /*FORMATAÇÕES PADRÃO*/
 
@@ -32,7 +37,7 @@ h2, h3{
 }
 
 .MediumText{
-    font-size: 1.4rem;
+    font-size: 1.02rem;
 }
 
 .BigText{
@@ -51,7 +56,7 @@ img{
 }
 
 hgroup > h2,h3,h4,h5,h6{
-    line-height: 2vh;
+    line-height: 4vh;
     margin-bottom: 2vh;
 }
 
@@ -76,7 +81,7 @@ hgroup > p{
 /*BOTÕES*/
 .Bt_Primary{ /*Botão principal*/
     text-decoration: none;
-    background-color: black;
+    background-color: #061739;
     color: white;
     height: 10vh;
     padding: 0 10vh;
@@ -100,10 +105,10 @@ hgroup > p{
     text-decoration: none;
     font-weight: 800;
     background-color: rgba(0, 0, 0, 0);
-    color: black;
+    color: #061739;
     height: 10vh;
     padding: 0 10vh;
-    border: 4px solid black;
+    border: 4px solid #061739;
     border-radius: 0 20px 20px 20px;
     margin: 0;
     top: 0;
@@ -131,8 +136,8 @@ hgroup > p{
 }
 
 .Bt_Round{
-    width:10%;
-    height: 15%;
+    width:6rem;
+    height: 5rem;
     background-color: #878787;
     font-family: 'Inter';
     font-weight: 700;
@@ -148,7 +153,6 @@ hgroup > p{
 /*FIM DE BOTÕES*/
 
 .Content_Box{ /*Caixa de Conteúdo Padrão*/
-    background-color: #e4e4e4;
     border-radius: 20px;
     margin-bottom: 3vh;
     padding: 0%;
@@ -159,7 +163,7 @@ hgroup > p{
 }
 
 .Card{
-    background-color: white;
+    background-color: #8d64ed;
     height: 45vh;
     width: 50vh;
     margin: 4vh 4vh 8vh 0;
@@ -286,22 +290,25 @@ hgroup > p{
 
 /*BARRA DE NAVEGAÇÃO*/
 #NavBar_Content{
-    background-color: #e4e4e4;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
-    padding-left: 5vh;
+    padding: 0 5vw;
     position: relative;
     height: 6vh;
     margin:1vh 0 3vh;
-    position: sticky;
-    top: 2vh;
-    z-index: 3;
+}
+
+#NavBar_Content h1{
+    background-color: white;
+    border-radius: 20px;
+    padding: 0 2vw 0 0;
 }
 
 .Bt_Link{
     padding:0 2vh;
+    color: white;
 }
 
 #BT_Entrar{
@@ -314,9 +321,8 @@ hgroup > p{
 /*APRESENTAÇÃO*/
 #Presentation_Content{
     justify-content: space-between;
-    height: 80vh;
+    height: 85vh;
     width: 100%;
-    background-color: white;
     border-radius: 0 20px 20px 20px;
 }
 
@@ -324,18 +330,30 @@ hgroup > p{
     border-radius: 0 20px 20px 20px;
     height: 80vh;
     width: 50vw;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 #Presentation_Content_Text{
     display: block;
     justify-content: center;
-    margin: 0 10vh;
-    width: 30vw;
+    margin: 0 2vw 0 5vw;
+    width: 100%;
+}
+
+#Presentation_Content_Text h2{
+    font-size: 3rem;
+    line-height: 6.5vh;
+}
+
+#Presentation_Content_Text p{
+    font-size: 1.02rem;
 }
 
 #Presentation_Content > hgroup > a{
-    margin-top: 4vh;
+    margin: 4vh 0;
+    height: 10vh;
+    width: 50%;
+
 }
 /*FIM DE APRESENTAÇÃO*/
 
