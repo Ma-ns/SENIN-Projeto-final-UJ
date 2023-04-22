@@ -1,7 +1,247 @@
+/*PÁGINA INICIAL*/
+.Body_ADM{
+    background-color: white;
+    background-image: none;
+}
+
+.ADM .Bt_Link{
+    color: #061739;
+}
+
+#BT_Criar{
+    height: 6vh;
+    margin: 0; 
+    left: 4px;
+}
+/*Apresentação*/
+#ADMHome_Presentation{
+    height: 85vh;
+    background-color: white;
+    padding: 2vh;
+}
+
+#ADMHome_Presentation_Left > .Text{
+    line-height: 0.2rem;
+    display: block;
+    justify-content: center;
+    height: 10vh;
+    margin-bottom: 1vh;
+}
+
+#ADMHome_Presentation_Left{
+    height: 80vh;
+    width: 50%;
+    background-color: white;
+    border-radius: 20px;
+    display: box;
+    align-items: start;
+    padding: 0 4%;
+}
+
+.ADMHome_PresentationCard{
+    height: 28vh;
+    width: 90%;
+    background-color: rgb(227, 233, 236);
+    margin-bottom: 2vh;
+}
+
+.ADMHome_PresentationCard > .Text{
+    padding: 3vh 0 1vh;
+}
+
+.ADMHome_PresentationCard > .Text > h2{
+    line-height: 0.4rem;
+}
+
+.ADMHome_PresentationCard > .Text > p{
+    line-height: 1.1rem;
+}
+
+.ADMHome_PresentationCard > .Button{
+    padding: 2vh 2vw;
+}
+
+#ADMHome_Presentation_Right{
+    width: 50%;
+    height: 80vh;
+}
+
+/*FIM de Apresentação*/
+/*Status de Formulários Criados*/
+#ADMHome_Forms{
+    height: 85vh;
+    width: 100%;
+    background-color: white;
+}
+
+#ADMHome_Forms > .Text{
+    padding: 3vh 0 1vh;
+}
+
+#ADMHome_Forms > .Text > h2{
+    line-height: 0.2rem;
+}
+
+.Bt_Card{
+    background-color: rgb(227, 233, 236);
+    border: 0;
+    border-radius: 0 20px 20px 20px;
+    padding: 2%;
+    width: 94%;
+    height: 15vh;
+    margin: 0 4% 2vh;
+    justify-content: space-between;
+    display: flex;
+}
+
+.Bt_Card > .Left{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    text-align: start;
+}
+
+.Bt_Card > .Left > img{
+    width: 8%;
+    border-radius: 100%;
+    margin-right: 2%;
+}
+
+.Bt_Card .Text{
+    align-items: end;
+
+}
+
+.Bt_Card .Text h3{
+    line-height: 1rem;
+    height: 2vh;
+    margin:0;
+}
+
+.Bt_Card .Text p{
+    line-height: 1rem;
+    margin:0;
+    height: 2vh;
+}
+
+.Bt_Card > p{
+    width: 40%;
+}
+
+.Bt_Card .Right{
+    background-color: #7791c4;
+    color: white;
+    border-radius: 0 100px 100px 100px;
+    width: 10%;
+    height: 100%;
+}
+.Bt_Card .Right >p{
+    color: white;
+}
+
+.OpenCard{
+    margin-bottom: 2vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.OpenCard_Content{
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+.OpenCard_Card{
+    height: 50vh;
+    width: 92%;
+    padding: 0 2%;
+    margin: 0 4% 4vh 6%;
+    border-radius: 0 20px 20px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.OpenCard_Card > .Card{
+    background-color: rgba(227, 233, 236);
+    width: 30%;
+    height: 42vh;
+    padding: 1.5vh 2vw;
+    text-align: start;
+    display: block;
+}
+
+.OpenCard_Card > .Card > img{
+    width: 90%;
+    height: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.OpenCard_Card > .Card > .Text{
+    height: 25%;
+    margin: 0;
+}
+
+.OpenCard_Card > .Card > .Text > h4{
+    width: 40%;
+    line-height: 0.8rem;
+    margin: 1vh 0 0.8vh;
+}
+
+.OpenCard_Card > .Card > .Text > p{
+    margin: 0;
+}
+
+.OpenCard_Card > .Card > .Text > .Status{
+    margin: 1vh 0;
+    background-color: #62dba8;
+    color: #054b18;
+    width: 50%;
+    height: 4vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.OpenCard_Card > .Card > .Text > .Button{
+    padding: 1vh 4vh;
+    border-radius: 0 100px 100px 100px;
+}
+
+.OpenCard_Card > .Button{
+    background-color: #7791c4;
+    border: 0;
+    padding: 1vh 5vh;
+    border-radius: 0 100px 100px 100px;
+}
+
+#ADMHome_Forms > .Button{
+    width: 20%;
+    height: 8vh;
+    display: flex;
+    margin: 0 auto;
+}
+
+/*PÁGINA DE CRIAÇÃO*/
 /*Barra de Opções Acima*/
+#AdmBody{
+    background-image: url(../Imagens/AnimatedBackground.svg);
+    background-position: 300px -500px;
+    overflow-x: hidden;
+    background-size: cover;
+}
+
 #Create_Content{
     width: 100%;
     height: 86vh;
+    background-color: rgb(227, 233, 236);
 }
 
 #Create_ContentLeft{
@@ -26,7 +266,7 @@
 #Create_Input input{
     height: 4vh;
     width: 100%;
-    background-color: #e4e4e4;
+    background-color: #7791c4;
     border: 0;
     border-radius: 20px;
     padding: 2vh;
@@ -72,7 +312,7 @@
     width: 100%;
     padding: 4vh 4vw;
     border-radius: 40px;
-    background-color: #bababa;
+    background-color: white;
     display: grid;
 }
 
